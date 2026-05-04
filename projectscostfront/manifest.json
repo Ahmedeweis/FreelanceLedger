@@ -1,0 +1,22 @@
+{
+    "name": "Freelance Ledger & Project Tracker",
+    "short_name": "Ledger",
+    "description": "Professional tool to track freelance income, pending balances, and project history.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#F8FAFC",
+    "theme_color": "#4F39F6",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/logo.webp",
+            "sizes": "192x192 512x512",
+            "type": "image/webp"
+        },
+        {
+            "src": "/logo.png",
+            "sizes": "192x192 512x512",
+            "type": "image/png"
+        }
+    ]
+}
