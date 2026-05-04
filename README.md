@@ -46,7 +46,7 @@ Freelance Ledger is a financial management application designed for freelancers 
 
 ```
 FreelanceLedger/
-├── projectscostfront/   # Vue.js Frontend
+├── projectscostfront/   # Vue.js Frontend (ledger-frontend)
 │   ├── src/
 │   │   ├── components/  # Reusable UI Elements
 │   │   ├── views/       # Application Pages
@@ -54,7 +54,7 @@ FreelanceLedger/
 │   │   └── assets/      # Styles & Static Assets
 │   ├── manifest.json    # PWA Support
 │   └── index.html       # Application Entry
-├── projectscosback/    # Express.js Backend
+├── projectscosback/    # Express.js Backend (ledger-backend)
 │   ├── controllers/    # Business Logic
 │   ├── routes/         # API Endpoints
 │   ├── db.js           # SQLite Configuration
@@ -71,7 +71,7 @@ FreelanceLedger/
 
 1.  **Clone the repository**
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Ahmedeweis/FreelanceLedger.git
     cd FreelanceLedger
     ```
 
