@@ -195,11 +195,13 @@
                 </div>
                 <!-- Card -->
                 <div
-                  class="flex-1 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                  class="flex-1 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all duration-500 ease-in-out"
+                  :class="month.total_received === 0 ? 'max-h-[72px] overflow-hidden opacity-60 grayscale-[0.5] group-hover:max-h-[1000px] group-hover:opacity-100 group-hover:grayscale-0' : ''">
                   <div class="flex items-center justify-between mb-4 border-b border-slate-100 pb-3">
                     <h3 class="font-bold text-lg text-slate-900">{{ month.month_name }}</h3>
                     <span
-                      class="bg-emerald-600 text-white text-xs font-black px-3 py-1.5 rounded-lg border border-emerald-700 shadow-md ring-1 ring-emerald-500/50">
+                      :class="month.total_received === 0 ? 'bg-slate-400 border-slate-500' : 'bg-emerald-600 border-emerald-700'"
+                      class="text-white text-xs font-black px-3 py-1.5 rounded-lg border shadow-md ring-1 ring-white/20">
                       {{ formatCurrency(month.total_received) }}
                     </span>
                   </div>
