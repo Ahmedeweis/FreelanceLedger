@@ -1,6 +1,6 @@
-# 📊 Freelance Ledger - Professional Project & Income Tracker
+# Freelance Ledger - Project & Income Tracker
 
-![Project Banner](https://img.shields.io/badge/Freelance--Ledger-Professional--Tracker-4F39F6?style=for-the-badge)
+![Project Banner](https://img.shields.io/badge/Freelance--Ledger-Project--Tracker-4F39F6?style=for-the-badge)
 
 ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
@@ -8,88 +8,90 @@
 ![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 
-## 📖 Overview
+## Overview
 
-**Freelance Ledger** is a sophisticated, full-featured financial management application designed specifically for freelancers and small businesses. It provides a seamless experience for tracking project progress, managing multi-currency income, calculating monthly earnings, and generating professional PDF reports. It features a modern, responsive dashboard with advanced sorting and filtering capabilities.
+Freelance Ledger is a financial management application designed for freelancers and small businesses. It facilitates tracking project progress, managing multi-currency income, and calculating earnings over custom date ranges. The system includes professional PDF reporting and a responsive dashboard for comprehensive data visualization.
 
-## 🚀 Features
+## Key Features
 
-### 👤 Financial Management
-*   **Comprehensive Summary**: Real-time view of Total Earned (Ever), Pending Balances, and Monthly Income.
-*   **Income Tracking**:
-    *   **Project-linked Income**: Track payments specific to active projects.
-    *   **Standalone Income**: Log income not tied to a specific project.
-    *   **Received vs Pending**: Visual indicators for payment status.
-*   **Earnings Calculator**: Custom date range tool to calculate total and average monthly earnings.
+### Financial Management
+*   **Real-time Analytics**: Instant visibility into total earnings, pending balances, and monthly performance.
+*   **Transaction Logging**:
+    *   **Project-specific Income**: Associate payments directly with active project milestones.
+    *   **Standalone Entries**: Log miscellaneous income outside of formal project structures.
+    *   **Status Indicators**: Visual differentiation between received and pending payments.
+*   **Earnings Calculator**: Automated calculation of total and average monthly income for user-defined periods.
 
-### 🛠️ Project & Operation Management
-*   **Active Project Tracking**: Manage project status (New, Completed, Pending, At Risk, Canceled).
-*   **Monthly Timeline**: Interactive history of all financial transactions grouped by month.
-*   **Professional Reporting**: Export your monthly timeline or filtered data to PDF with a single click.
-*   **Advanced Sorting**: Sort projects and income by Date, Name, or Amount dynamically.
+### Project Operations
+*   **Lifecycle Tracking**: Monitor project status through distinct phases: New, Completed, Pending, At Risk, or Canceled.
+*   **Financial Timeline**: Monthly grouping of all transactions for historical auditing.
+*   **Reporting**: Export filtered timelines and financial data to PDF format.
+*   **Data Organization**: Multi-parameter sorting by Date, Project Name, or Transaction Amount.
 
-### 🎨 UI/UX Excellence
-*   **Modern Dashboard**: Clean, professional interface with high-contrast status badges and responsive layouts.
-*   **Custom Components**: Professional custom dropdowns, animated modals, and interactive charts.
-*   **Real-time Feedback**: Integrated SweetAlert2 for confirmations and Vue-Toastification for live action updates.
+### Technical UI/UX
+*   **Responsive Interface**: Optimized layout for mobile and desktop environments using Tailwind CSS.
+*   **Modern Components**: Custom-built dropdowns, modal systems, and high-contrast data badges.
+*   **User Feedback**: Integrated notification system for real-time operation confirmation.
 
-## 🛠️ Tech Stack
+## Technical Stack
 
-*   **Frontend**: [Vue 3](https://vuejs.org/) (Composition API)
-*   **Build Tool**: [Vite](https://vitejs.dev/)
-*   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-*   **Backend**: [Node.js](https://nodejs.org/) with [Express](https://expressjs.com/)
-*   **Database**: [SQLite](https://www.sqlite.org/)
-*   **Utilities**: `jspdf` (Reporting), `sweetalert2` (Dialogs), `vue-toastification` (Notifications), `dayjs` (Date Handling).
+*   **Frontend**: Vue 3 (Composition API)
+*   **Build Engine**: Vite
+*   **Styling**: Tailwind CSS
+*   **Backend**: Node.js / Express
+*   **Database**: SQLite
+*   **Key Libraries**: `jspdf`, `sweetalert2`, `vue-toastification`, `dayjs`.
 
-## 📂 Project Structure
+## Project Architecture
 
 ```
 FreelanceLedger/
-├── projectscostfront/   # Frontend Vue application
+├── projectscostfront/   # Vue.js Frontend
 │   ├── src/
-│   │   ├── components/  # Reusable UI components
-│   │   ├── views/       # Main page views (Dashboard)
-│   │   ├── services/    # API integration layer
-│   │   └── assets/      # Static assets & styles
-│   ├── manifest.json    # PWA configuration
-│   └── index.html       # Entry point
-├── projectscosback/    # Backend Express API
-│   ├── db.js           # Database configuration
-│   ├── server.js       # API routes & server logic
-│   └── database.sqlite # SQLite data storage
-└── README.md           # Project documentation
+│   │   ├── components/  # Reusable UI Elements
+│   │   ├── views/       # Application Pages
+│   │   ├── services/    # API & Data Fetching
+│   │   └── assets/      # Styles & Static Assets
+│   ├── manifest.json    # PWA Support
+│   └── index.html       # Application Entry
+├── projectscosback/    # Express.js Backend
+│   ├── controllers/    # Business Logic
+│   ├── routes/         # API Endpoints
+│   ├── db.js           # SQLite Configuration
+│   └── server.js       # Main Entry Point
+└── README.md           # Documentation
 ```
 
-## ⚡ Getting Started
+## Getting Started
 
 ### Prerequisites
-*   Node.js (LTS version recommended)
+*   Node.js (LTS recommended)
 
 ### Installation
 
-1.  **Clone the repository**:
+1.  **Clone the repository**
     ```bash
     git clone <repository-url>
     cd FreelanceLedger
     ```
 
-2.  **Setup Backend**:
+2.  **Backend Configuration**
     ```bash
     cd projectscosback
     npm install
     npm start
     ```
 
-3.  **Setup Frontend**:
+3.  **Frontend Configuration**
     ```bash
     cd ../projectscostfront
     npm install
     npm run dev
     ```
 
-4.  **Open your browser** at `http://localhost:5173`
+4.  **Access Application**
+    Open `http://localhost:5173` in your browser.
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request. We value clean code, consistent UI patterns, and thorough documentation.
+Pull requests are welcome. For major changes, please open an issue first to discuss the proposed updates. Ensure consistent coding standards and UI patterns are maintained.
