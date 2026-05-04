@@ -12,6 +12,7 @@ import swaggerUi from 'swagger-ui-express';
 import ledgerRoutes from './routes/ledger.js';
 import projectRoutes from './routes/projects.js';
 import incomeRoutes from './routes/income.js';
+import initDb from './dbInit.js';
 
 dotenv.config();
 const app = express();
@@ -47,15 +48,23 @@ const swaggerOptions = {
 };
 const startServer = async () => {
   try {
+    // 1. Check DB Connection
     const res = await pool.query('SELECT NOW()');
-    console.log('DB connected:', res.rows[0]);
+    console.log('✅ DB Connected at:', res.rows[0].now);
+
+    // 2. Automate Schema Setup (Senior Developer Approach)
+    await initDb();
+
+    // 3. Setup Swagger
     const swaggerSpec = swaggerJsdoc(swaggerOptions);
     app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
+    // 4. Start Listening
     const PORT = process.env.PORT || 5000;
-    app.listen(PORT, '0.0.0.0', () => console.log(`Server running on port ${PORT}`));
+    app.listen(PORT, '0.0.0.0', () => console.log(`🚀 Server running on port ${PORT}`));
   } catch (err) {
-    console.error('DB connection error:', err);
-    process.exit(1); // هيقفل السيرفر لو فيه مشكلة
+    console.error('❌ Failed to start server:', err.message);
+    process.exit(1);
   }
 };
 startServer();

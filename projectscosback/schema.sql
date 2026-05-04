@@ -1,3 +1,6 @@
+-- 0. Ensure UUID extension is available (for older Postgres versions)
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+
 -- 1. Create the project_status ENUM
 DO $$ 
 BEGIN
